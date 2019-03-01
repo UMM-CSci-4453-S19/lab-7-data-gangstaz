@@ -1,22 +1,17 @@
 var express=require('express'),
 app = express(),
 port = process.env.PORT || 1337;
-
-var buttons=[ //static buttons
-    {"buttonID":1,"left":10,"top":70,"width":100,"label":"hotdogs","invID":1},
-    {"buttonID":2,"left":110,"top":70,"width":100,"label":"hambugers","invID":2},
-    {"buttonID":3,"left":210,"top":70,"width":100,"label":"bannanas","invID":3},
-    {"buttonID":4,"left":10,"top":120,"width":100,"label":"milkduds","invID":4}];
-
-// var promises = require("./Promises.js");
-// var query = promises.retrieveButtons();
-// console.log(query);
-
+var promise1=require('./button-promise.js');
 
 
 app.use(express.static(__dirname + '/public')); //Serves the web pages
 app.get("/buttons",function(req,res){ // handles the /buttons API
-  res.send(buttons);
+
+  promise1.buttons.then(function(buttons){
+      // get the button array from the promise
+      res.send(buttons);
+      })
+      .catch(function(err){console.log("DANGER:",err)});
 });
 
 app.listen(port);

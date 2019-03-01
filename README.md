@@ -732,7 +732,7 @@ Be sure to push the appropriate files to your group's repository.
     - [ ] `_name_.summarize-db.js` from the functions supplied in [approach one](#approach-one).  You will need to incorporate some other code to make it work
     - [ ] `_name_.show-databases.js` from [back to databases](#back-to-databases)
     - [ ] `_name_.dbf-setups.js` from [making things a big cleaner(#making-things-a-bit-cleaner)
-    - [ ] `_name_.dbf-summarize-db-promises.js` from [making things a big cleaner(#making-things-a-bit-cleaner)
+    - [ ] `_name_.button-promise.js` from [making things a big cleaner(#making-things-a-bit-cleaner)
  - [ ] As a group 
     - [ ] [Angular JS tutorial](http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/)
       - [ ] `express.js` in root directory of project/repository
