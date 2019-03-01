@@ -9,25 +9,25 @@
     <!--our implementation-->
     <script> src = "./dbf-summarize-db.promises.js"</script>
 </head>
-<!--<body ng-app="buttons">-->
+<body ng-app="buttons">
+<div class="container-fluid">
+    <h1>Cash Register</h1>
+    <div id="buttons" ng-controller="buttonCtrl" >
+    <div ng-repeat="button in buttons">
+    <div style="position:absolute;left:{{button.positionLeft}}px;top:{{button.top}}px"><button id="{{button.buttonID}}" >{{button.label}}</button></div>
+    </div>
+    </div>
+</div>
+</body>
+<!--<body ng-app="promises">-->
 <!--<div class="container-fluid">-->
     <!--<h1>Cash Register</h1>-->
-    <!--<div id="buttons" ng-controller="buttonCtrl" >-->
-    <!--<div ng-repeat="button in buttons">-->
+    <!--<div id="promises" ng-controller="promisesController" >-->
+    <!--<div ng-repeat="promise in promises">-->
     <!--<div style="position:absolute;left:{{button.left}}px;top:{{button.top}}px"><button id="{{button.buttonID}}" >{{button.label}}</button></div>-->
     <!--</div>-->
     <!--</div>-->
 <!--</div>-->
 <!--</body>-->
-<body ng-app="promises">
-<div class="container-fluid">
-    <h1>Cash Register</h1>
-    <div id="promises" ng-controller="promisesController" >
-    <div ng-repeat="promise in promises">
-    <div style="position:absolute;left:{{button.left}}px;top:{{button.top}}px"><button id="{{button.buttonID}}" >{{button.label}}</button></div>
-    </div>
-    </div>
-</div>
-</body>
 </html>
 
