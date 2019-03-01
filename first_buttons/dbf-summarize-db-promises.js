@@ -4,8 +4,8 @@ DBF=require('./dbf-setup.js');
 
 angular.module('promises',[])
     .controller('promiserController',buttons);
-    // .factory('buttonApi',buttonApi)
-    // .constant('apiUrl','http://localhost:1337'); // CHANGED for the lab 2017!
+// .factory('buttonApi',buttonApi)
+// .constant('apiUrl','http://localhost:1337'); // CHANGED for the lab 2017!
 
 var getButtons=function(){//Returns a promise that can take a handler ready to process the results
     var sql = "select * from dataGangstas.till_buttons";
@@ -32,7 +32,7 @@ var dbfToPromise=function(dbfObj){
     queryPromise=queryPromise.then(function(results){return({table:results,dbf:dbf})});
     return(queryPromise);
 };
-
+conn
 //Takes an object (as returned by showDatabases) and returns a promise that resolves
 // to an array of objects containing table descriptions.
 // This function creates helper functions:
