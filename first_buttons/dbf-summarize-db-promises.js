@@ -3,9 +3,9 @@ mysql = require('mysql');
 DBF=require('./dbf-setup.js');
 
 angular.module('promises',[])
-    .controller('promisesController',buttons);
+    .controller('promisesController', buttons);
 // .factory('buttonApi',buttonApi)
-// .constant('apiUrl','http://localhost:1337'); // CHANGED for the lab 2017!
+    .constant('apiUrl','http://localhost:1337'); // CHANGED for the lab 2017!
 
 var getButtons=function(){//Returns a promise that can take a handler ready to process the results
     var sql = "select * from dataGangstas.till_buttons";
