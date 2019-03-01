@@ -3,7 +3,7 @@ mysql = require('mysql');
 DBF=require('./dbf-setup.js');
 
 angular.module('promises',[])
-    .controller('promiserController',buttons);
+    .controller('promisesController',buttons);
 // .factory('buttonApi',buttonApi)
 // .constant('apiUrl','http://localhost:1337'); // CHANGED for the lab 2017!
 
@@ -68,3 +68,5 @@ var buttons=getButtons()
     .then(processDBFs)
     .then(DBF.releaseDBF)
     .catch(function(err){console.log("DANGER:",err)});
+
+exports.buttons= buttons;
