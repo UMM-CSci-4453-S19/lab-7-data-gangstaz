@@ -32,7 +32,7 @@ var dbfToPromise=function(dbfObj){
     queryPromise=queryPromise.then(function(results){return({table:results,dbf:dbf})});
     return(queryPromise);
 };
-conn
+
 //Takes an object (as returned by showDatabases) and returns a promise that resolves
 // to an array of objects containing table descriptions.
 // This function creates helper functions:
